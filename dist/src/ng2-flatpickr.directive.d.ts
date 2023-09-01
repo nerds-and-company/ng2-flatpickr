@@ -250,7 +250,7 @@ export declare class Ng2FlatpickrDirective implements AfterViewInit, OnDestroy, 
     /** Allow access properties using index notation */
     [key: string]: any;
     constructor(parent: ControlContainer, ngControl: NgControl, element: ElementRef, renderer: Renderer2);
-    readonly control: FormControl;
+    get control(): FormControl;
     ngAfterViewInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     ngOnDestroy(): void;
@@ -280,6 +280,6 @@ export declare class Ng2FlatpickrDirective implements AfterViewInit, OnDestroy, 
      * doesn't exist.
      */
     protected getOption(option: string, defaultValue?: any): any;
-    static ɵfac: i0.ɵɵFactoryDef<Ng2FlatpickrDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<Ng2FlatpickrDirective, "[flatpickr]", ["ng2-flatpickr"], { "flatpickrOptions": "flatpickr"; "placeholder": "placeholder"; "flatpickrAltFormat": "altFormat"; "flatpickrAltInput": "altInput"; "flatpickrAltInputClass": "altInputClass"; "flatpickrAllowInput": "allowInput"; "flatpickrAppendTo": "appendTo"; "flatpickrClickOpens": "clickOpens"; "flatpickrDateFormat": "dateFormat"; "flatpickrDefaultDate": "defaultDate"; "flatpickrDisable": "disable"; "flatpickrDisableMobile": "disableMobile"; "flatpickrEnable": "enable"; "flatpickrEnableTime": "enableTime"; "flatpickrEnableSeconds": "enableSeconds"; "flatpickrHourIncrement": "hourIncrement"; "flatpickrInline": "inline"; "flatpickrLocale": "locale"; "flatpickrMaxDate": "maxDate"; "flatpickrMinDate": "minDate"; "flatpickrMinuteIncrement": "minuteIncrement"; "flatpickrMode": "mode"; "flatpickrNextArrow": "nextArrow"; "flatpickrNoCalendar": "noCalendar"; "flatpickrParseDate": "parseDate"; "flatpickrPrevArrow": "prevArrow"; "flatpickrShorthandCurrentMonth": "shorthandCurrentMonth"; "flatpickrStatic": "static"; "flatpickrTime_24hr": "time_24hr"; "flatpickrUtc": "utc"; "flatpickrWeekNumbers": "weekNumbers"; "flatpickrWrap": "wrap"; }, { "flatpickrOnChange": "onChange"; "flatpickrOnClose": "onClose"; "flatpickrOnOpen": "onOpen"; "flatpickrOnReady": "onReady"; }, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<Ng2FlatpickrDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<Ng2FlatpickrDirective, "[flatpickr]", ["ng2-flatpickr"], { "flatpickrOptions": "flatpickr"; "placeholder": "placeholder"; "flatpickrAltFormat": "altFormat"; "flatpickrAltInput": "altInput"; "flatpickrAltInputClass": "altInputClass"; "flatpickrAllowInput": "allowInput"; "flatpickrAppendTo": "appendTo"; "flatpickrClickOpens": "clickOpens"; "flatpickrDateFormat": "dateFormat"; "flatpickrDefaultDate": "defaultDate"; "flatpickrDisable": "disable"; "flatpickrDisableMobile": "disableMobile"; "flatpickrEnable": "enable"; "flatpickrEnableTime": "enableTime"; "flatpickrEnableSeconds": "enableSeconds"; "flatpickrHourIncrement": "hourIncrement"; "flatpickrInline": "inline"; "flatpickrLocale": "locale"; "flatpickrMaxDate": "maxDate"; "flatpickrMinDate": "minDate"; "flatpickrMinuteIncrement": "minuteIncrement"; "flatpickrMode": "mode"; "flatpickrNextArrow": "nextArrow"; "flatpickrNoCalendar": "noCalendar"; "flatpickrParseDate": "parseDate"; "flatpickrPrevArrow": "prevArrow"; "flatpickrShorthandCurrentMonth": "shorthandCurrentMonth"; "flatpickrStatic": "static"; "flatpickrTime_24hr": "time_24hr"; "flatpickrUtc": "utc"; "flatpickrWeekNumbers": "weekNumbers"; "flatpickrWrap": "wrap"; }, { "flatpickrOnChange": "onChange"; "flatpickrOnClose": "onClose"; "flatpickrOnOpen": "onOpen"; "flatpickrOnReady": "onReady"; }, never>;
 }

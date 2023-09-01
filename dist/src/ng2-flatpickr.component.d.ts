@@ -12,7 +12,8 @@ export declare class Ng2FlatpickrComponent implements AfterViewInit, ControlValu
     placeholder: string;
     addClass: string;
     setDate: string | Date;
-    tabindex: number;
+    get tabindex(): number;
+    set tabindex(ti: number);
     hideButton: boolean;
     writeValue(value: any): void;
     registerOnChange(fn: any): void;
@@ -23,6 +24,6 @@ export declare class Ng2FlatpickrComponent implements AfterViewInit, ControlValu
     ngAfterViewInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     onFocus(event: any): void;
-    static ɵfac: i0.ɵɵFactoryDef<Ng2FlatpickrComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<Ng2FlatpickrComponent, "ng2-flatpickr", never, { "config": "config"; "placeholder": "placeholder"; "addClass": "addClass"; "setDate": "setDate"; "tabindex": "tabindex"; "hideButton": "hideButton"; }, {}, never, ["*"]>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<Ng2FlatpickrComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<Ng2FlatpickrComponent, "ng2-flatpickr", never, { "config": "config"; "placeholder": "placeholder"; "addClass": "addClass"; "setDate": "setDate"; "tabindex": "tabindex"; "hideButton": "hideButton"; }, {}, never, ["*"]>;
 }

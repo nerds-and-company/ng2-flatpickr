@@ -1,22 +1,13 @@
-import flatpickr from 'flatpickr';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵelementEnd, ɵɵclassMapInterpolate1, ɵɵproperty, ɵɵdefineComponent, ɵɵstaticViewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵProvidersFeature, forwardRef, ɵɵNgOnChangesFeature, ɵɵprojectionDef, ɵɵtemplate, ɵɵprojection, ɵɵadvance, ɵsetClassMetadata, Component, ViewChild, Input, EventEmitter, ɵɵdirectiveInject, ElementRef, Renderer2, ɵɵdefineDirective, Directive, Output, HostListener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlContainer, NgControl } from '@angular/forms';
-import { NgIf, CommonModule } from '@angular/common';
+import * as i0 from '@angular/core';
+import { forwardRef, Component, ViewChild, Input, EventEmitter, Directive, Output, HostListener, NgModule } from '@angular/core';
+import * as i1$1 from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import * as i1 from '@angular/common';
+import { CommonModule } from '@angular/common';
+import 'flatpickr';
 
-const _c0 = ["flatpickr"];
-function Ng2FlatpickrComponent_input_2_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "input", 3);
-    ɵɵlistener("focus", function Ng2FlatpickrComponent_input_2_Template_input_focus_0_listener($event) { ɵɵrestoreView(_r3); const ctx_r2 = ɵɵnextContext(); return ctx_r2.onFocus($event); });
-    ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = ɵɵnextContext();
-    ɵɵclassMapInterpolate1("ng2-flatpickr-input ", ctx_r1.addClass, "");
-    ɵɵproperty("placeholder", ctx_r1.placeholder)("tabindex", ctx_r1.tabindex);
-} }
-const _c1 = ["*"];
 if (typeof window !== 'undefined') {
-    
+    require('flatpickr');
 }
 class Ng2FlatpickrComponent {
     constructor() {
@@ -80,64 +71,55 @@ class Ng2FlatpickrComponent {
         this.onTouchedFn();
     }
 }
-Ng2FlatpickrComponent.ɵfac = function Ng2FlatpickrComponent_Factory(t) { return new (t || Ng2FlatpickrComponent)(); };
-Ng2FlatpickrComponent.ɵcmp = ɵɵdefineComponent({ type: Ng2FlatpickrComponent, selectors: [["ng2-flatpickr"]], viewQuery: function Ng2FlatpickrComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵɵstaticViewQuery(_c0, true);
-    } if (rf & 2) {
-        var _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.flatpickrElement = _t.first);
-    } }, inputs: { config: "config", placeholder: "placeholder", addClass: "addClass", setDate: "setDate", tabindex: "tabindex", hideButton: "hideButton" }, features: [ɵɵProvidersFeature([
-            {
-                provide: NG_VALUE_ACCESSOR,
-                useExisting: forwardRef(() => Ng2FlatpickrComponent),
-                multi: true
-            }
-        ]), ɵɵNgOnChangesFeature], ngContentSelectors: _c1, decls: 4, vars: 1, consts: [[1, "ng2-flatpickr-input-container"], ["flatpickr", ""], ["type", "text", "data-input", "", 3, "class", "placeholder", "tabindex", "focus", 4, "ngIf"], ["type", "text", "data-input", "", 3, "placeholder", "tabindex", "focus"]], template: function Ng2FlatpickrComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵelementStart(0, "div", 0, 1);
-        ɵɵtemplate(2, Ng2FlatpickrComponent_input_2_Template, 1, 5, "input", 2);
-        ɵɵprojection(3);
-        ɵɵelementEnd();
-    } if (rf & 2) {
-        ɵɵadvance(2);
-        ɵɵproperty("ngIf", !ctx.hideButton);
-    } }, directives: [NgIf], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2FlatpickrComponent, [{
-        type: Component,
-        args: [{
-                selector: 'ng2-flatpickr',
-                template: `
+Ng2FlatpickrComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+Ng2FlatpickrComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: Ng2FlatpickrComponent, selector: "ng2-flatpickr", inputs: { config: "config", placeholder: "placeholder", addClass: "addClass", setDate: "setDate", tabindex: "tabindex", hideButton: "hideButton" }, providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => Ng2FlatpickrComponent),
+            multi: true
+        }
+    ], viewQueries: [{ propertyName: "flatpickrElement", first: true, predicate: ["flatpickr"], descendants: true, static: true }], usesOnChanges: true, ngImport: i0, template: `
+		<div class="ng2-flatpickr-input-container" #flatpickr>
+			<input *ngIf="!hideButton" class="ng2-flatpickr-input {{ addClass }}" [placeholder]="placeholder" [tabindex]="tabindex" type="text" (focus)="onFocus($event)" data-input>
+			<ng-content></ng-content>
+		</div>
+		`, isInline: true, directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'ng2-flatpickr',
+                    template: `
 		<div class="ng2-flatpickr-input-container" #flatpickr>
 			<input *ngIf="!hideButton" class="ng2-flatpickr-input {{ addClass }}" [placeholder]="placeholder" [tabindex]="tabindex" type="text" (focus)="onFocus($event)" data-input>
 			<ng-content></ng-content>
 		</div>
 		`,
-                providers: [
-                    {
-                        provide: NG_VALUE_ACCESSOR,
-                        useExisting: forwardRef(() => Ng2FlatpickrComponent),
-                        multi: true
-                    }
-                ]
-            }]
-    }], null, { flatpickrElement: [{
-            type: ViewChild,
-            args: ['flatpickr', {
-                    static: true
+                    providers: [
+                        {
+                            provide: NG_VALUE_ACCESSOR,
+                            useExisting: forwardRef(() => Ng2FlatpickrComponent),
+                            multi: true
+                        }
+                    ]
                 }]
-        }], config: [{
-            type: Input
-        }], placeholder: [{
-            type: Input
-        }], addClass: [{
-            type: Input
-        }], setDate: [{
-            type: Input
-        }], tabindex: [{
-            type: Input
-        }], hideButton: [{
-            type: Input
-        }] }); })();
+        }], propDecorators: { flatpickrElement: [{
+                type: ViewChild,
+                args: ['flatpickr', {
+                        static: true
+                    }]
+            }], config: [{
+                type: Input
+            }], placeholder: [{
+                type: Input
+            }], addClass: [{
+                type: Input
+            }], setDate: [{
+                type: Input
+            }], tabindex: [{
+                type: Input
+            }], hideButton: [{
+                type: Input
+            }] } });
 
 class Ng2FlatpickrDirective {
     constructor(parent, ngControl, element, renderer) {
@@ -362,147 +344,145 @@ class Ng2FlatpickrDirective {
         }
     }
 }
-Ng2FlatpickrDirective.ɵfac = function Ng2FlatpickrDirective_Factory(t) { return new (t || Ng2FlatpickrDirective)(ɵɵdirectiveInject(ControlContainer), ɵɵdirectiveInject(NgControl), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2)); };
-Ng2FlatpickrDirective.ɵdir = ɵɵdefineDirective({ type: Ng2FlatpickrDirective, selectors: [["", "flatpickr", ""]], hostBindings: function Ng2FlatpickrDirective_HostBindings(rf, ctx) { if (rf & 1) {
-        ɵɵlistener("dblclick", function Ng2FlatpickrDirective_dblclick_HostBindingHandler() { return ctx.onClick(); });
-    } }, inputs: { flatpickrOptions: ["flatpickr", "flatpickrOptions"], placeholder: "placeholder", flatpickrAltFormat: ["altFormat", "flatpickrAltFormat"], flatpickrAltInput: ["altInput", "flatpickrAltInput"], flatpickrAltInputClass: ["altInputClass", "flatpickrAltInputClass"], flatpickrAllowInput: ["allowInput", "flatpickrAllowInput"], flatpickrAppendTo: ["appendTo", "flatpickrAppendTo"], flatpickrClickOpens: ["clickOpens", "flatpickrClickOpens"], flatpickrDateFormat: ["dateFormat", "flatpickrDateFormat"], flatpickrDefaultDate: ["defaultDate", "flatpickrDefaultDate"], flatpickrDisable: ["disable", "flatpickrDisable"], flatpickrDisableMobile: ["disableMobile", "flatpickrDisableMobile"], flatpickrEnable: ["enable", "flatpickrEnable"], flatpickrEnableTime: ["enableTime", "flatpickrEnableTime"], flatpickrEnableSeconds: ["enableSeconds", "flatpickrEnableSeconds"], flatpickrHourIncrement: ["hourIncrement", "flatpickrHourIncrement"], flatpickrInline: ["inline", "flatpickrInline"], flatpickrLocale: ["locale", "flatpickrLocale"], flatpickrMaxDate: ["maxDate", "flatpickrMaxDate"], flatpickrMinDate: ["minDate", "flatpickrMinDate"], flatpickrMinuteIncrement: ["minuteIncrement", "flatpickrMinuteIncrement"], flatpickrMode: ["mode", "flatpickrMode"], flatpickrNextArrow: ["nextArrow", "flatpickrNextArrow"], flatpickrNoCalendar: ["noCalendar", "flatpickrNoCalendar"], flatpickrParseDate: ["parseDate", "flatpickrParseDate"], flatpickrPrevArrow: ["prevArrow", "flatpickrPrevArrow"], flatpickrShorthandCurrentMonth: ["shorthandCurrentMonth", "flatpickrShorthandCurrentMonth"], flatpickrStatic: ["static", "flatpickrStatic"], flatpickrTime_24hr: ["time_24hr", "flatpickrTime_24hr"], flatpickrUtc: ["utc", "flatpickrUtc"], flatpickrWeekNumbers: ["weekNumbers", "flatpickrWeekNumbers"], flatpickrWrap: ["wrap", "flatpickrWrap"] }, outputs: { flatpickrOnChange: "onChange", flatpickrOnClose: "onClose", flatpickrOnOpen: "onOpen", flatpickrOnReady: "onReady" }, exportAs: ["ng2-flatpickr"], features: [ɵɵNgOnChangesFeature] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2FlatpickrDirective, [{
-        type: Directive,
-        args: [{ selector: '[flatpickr]', exportAs: 'ng2-flatpickr' }]
-    }], function () { return [{ type: ControlContainer }, { type: NgControl }, { type: ElementRef }, { type: Renderer2 }]; }, { flatpickrOptions: [{
-            type: Input,
-            args: ['flatpickr']
-        }], placeholder: [{
-            type: Input,
-            args: ['placeholder']
-        }], flatpickrAltFormat: [{
-            type: Input,
-            args: ['altFormat']
-        }], flatpickrAltInput: [{
-            type: Input,
-            args: ['altInput']
-        }], flatpickrAltInputClass: [{
-            type: Input,
-            args: ['altInputClass']
-        }], flatpickrAllowInput: [{
-            type: Input,
-            args: ['allowInput']
-        }], flatpickrAppendTo: [{
-            type: Input,
-            args: ['appendTo']
-        }], flatpickrClickOpens: [{
-            type: Input,
-            args: ['clickOpens']
-        }], flatpickrDateFormat: [{
-            type: Input,
-            args: ['dateFormat']
-        }], flatpickrDefaultDate: [{
-            type: Input,
-            args: ['defaultDate']
-        }], flatpickrDisable: [{
-            type: Input,
-            args: ['disable']
-        }], flatpickrDisableMobile: [{
-            type: Input,
-            args: ['disableMobile']
-        }], flatpickrEnable: [{
-            type: Input,
-            args: ['enable']
-        }], flatpickrEnableTime: [{
-            type: Input,
-            args: ['enableTime']
-        }], flatpickrEnableSeconds: [{
-            type: Input,
-            args: ['enableSeconds']
-        }], flatpickrHourIncrement: [{
-            type: Input,
-            args: ['hourIncrement']
-        }], flatpickrInline: [{
-            type: Input,
-            args: ['inline']
-        }], flatpickrLocale: [{
-            type: Input,
-            args: ['locale']
-        }], flatpickrMaxDate: [{
-            type: Input,
-            args: ['maxDate']
-        }], flatpickrMinDate: [{
-            type: Input,
-            args: ['minDate']
-        }], flatpickrMinuteIncrement: [{
-            type: Input,
-            args: ['minuteIncrement']
-        }], flatpickrMode: [{
-            type: Input,
-            args: ['mode']
-        }], flatpickrNextArrow: [{
-            type: Input,
-            args: ['nextArrow']
-        }], flatpickrNoCalendar: [{
-            type: Input,
-            args: ['noCalendar']
-        }], flatpickrParseDate: [{
-            type: Input,
-            args: ['parseDate']
-        }], flatpickrPrevArrow: [{
-            type: Input,
-            args: ['prevArrow']
-        }], flatpickrShorthandCurrentMonth: [{
-            type: Input,
-            args: ['shorthandCurrentMonth']
-        }], flatpickrStatic: [{
-            type: Input,
-            args: ['static']
-        }], flatpickrTime_24hr: [{
-            type: Input,
-            args: ['time_24hr']
-        }], flatpickrUtc: [{
-            type: Input,
-            args: ['utc']
-        }], flatpickrWeekNumbers: [{
-            type: Input,
-            args: ['weekNumbers']
-        }], flatpickrWrap: [{
-            type: Input,
-            args: ['wrap']
-        }], flatpickrOnChange: [{
-            type: Output,
-            args: ['onChange']
-        }], flatpickrOnClose: [{
-            type: Output,
-            args: ['onClose']
-        }], flatpickrOnOpen: [{
-            type: Output,
-            args: ['onOpen']
-        }], flatpickrOnReady: [{
-            type: Output,
-            args: ['onReady']
-        }], onClick: [{
-            type: HostListener,
-            args: ['dblclick']
-        }] }); })();
+Ng2FlatpickrDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrDirective, deps: [{ token: i1$1.ControlContainer }, { token: i1$1.NgControl }, { token: i0.ElementRef }, { token: i0.Renderer2 }], target: i0.ɵɵFactoryTarget.Directive });
+Ng2FlatpickrDirective.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "12.2.17", type: Ng2FlatpickrDirective, selector: "[flatpickr]", inputs: { flatpickrOptions: ["flatpickr", "flatpickrOptions"], placeholder: "placeholder", flatpickrAltFormat: ["altFormat", "flatpickrAltFormat"], flatpickrAltInput: ["altInput", "flatpickrAltInput"], flatpickrAltInputClass: ["altInputClass", "flatpickrAltInputClass"], flatpickrAllowInput: ["allowInput", "flatpickrAllowInput"], flatpickrAppendTo: ["appendTo", "flatpickrAppendTo"], flatpickrClickOpens: ["clickOpens", "flatpickrClickOpens"], flatpickrDateFormat: ["dateFormat", "flatpickrDateFormat"], flatpickrDefaultDate: ["defaultDate", "flatpickrDefaultDate"], flatpickrDisable: ["disable", "flatpickrDisable"], flatpickrDisableMobile: ["disableMobile", "flatpickrDisableMobile"], flatpickrEnable: ["enable", "flatpickrEnable"], flatpickrEnableTime: ["enableTime", "flatpickrEnableTime"], flatpickrEnableSeconds: ["enableSeconds", "flatpickrEnableSeconds"], flatpickrHourIncrement: ["hourIncrement", "flatpickrHourIncrement"], flatpickrInline: ["inline", "flatpickrInline"], flatpickrLocale: ["locale", "flatpickrLocale"], flatpickrMaxDate: ["maxDate", "flatpickrMaxDate"], flatpickrMinDate: ["minDate", "flatpickrMinDate"], flatpickrMinuteIncrement: ["minuteIncrement", "flatpickrMinuteIncrement"], flatpickrMode: ["mode", "flatpickrMode"], flatpickrNextArrow: ["nextArrow", "flatpickrNextArrow"], flatpickrNoCalendar: ["noCalendar", "flatpickrNoCalendar"], flatpickrParseDate: ["parseDate", "flatpickrParseDate"], flatpickrPrevArrow: ["prevArrow", "flatpickrPrevArrow"], flatpickrShorthandCurrentMonth: ["shorthandCurrentMonth", "flatpickrShorthandCurrentMonth"], flatpickrStatic: ["static", "flatpickrStatic"], flatpickrTime_24hr: ["time_24hr", "flatpickrTime_24hr"], flatpickrUtc: ["utc", "flatpickrUtc"], flatpickrWeekNumbers: ["weekNumbers", "flatpickrWeekNumbers"], flatpickrWrap: ["wrap", "flatpickrWrap"] }, outputs: { flatpickrOnChange: "onChange", flatpickrOnClose: "onClose", flatpickrOnOpen: "onOpen", flatpickrOnReady: "onReady" }, host: { listeners: { "dblclick": "onClick()" } }, exportAs: ["ng2-flatpickr"], usesOnChanges: true, ngImport: i0 });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrDirective, decorators: [{
+            type: Directive,
+            args: [{ selector: '[flatpickr]', exportAs: 'ng2-flatpickr' }]
+        }], ctorParameters: function () { return [{ type: i1$1.ControlContainer }, { type: i1$1.NgControl }, { type: i0.ElementRef }, { type: i0.Renderer2 }]; }, propDecorators: { flatpickrOptions: [{
+                type: Input,
+                args: ['flatpickr']
+            }], placeholder: [{
+                type: Input,
+                args: ['placeholder']
+            }], flatpickrAltFormat: [{
+                type: Input,
+                args: ['altFormat']
+            }], flatpickrAltInput: [{
+                type: Input,
+                args: ['altInput']
+            }], flatpickrAltInputClass: [{
+                type: Input,
+                args: ['altInputClass']
+            }], flatpickrAllowInput: [{
+                type: Input,
+                args: ['allowInput']
+            }], flatpickrAppendTo: [{
+                type: Input,
+                args: ['appendTo']
+            }], flatpickrClickOpens: [{
+                type: Input,
+                args: ['clickOpens']
+            }], flatpickrDateFormat: [{
+                type: Input,
+                args: ['dateFormat']
+            }], flatpickrDefaultDate: [{
+                type: Input,
+                args: ['defaultDate']
+            }], flatpickrDisable: [{
+                type: Input,
+                args: ['disable']
+            }], flatpickrDisableMobile: [{
+                type: Input,
+                args: ['disableMobile']
+            }], flatpickrEnable: [{
+                type: Input,
+                args: ['enable']
+            }], flatpickrEnableTime: [{
+                type: Input,
+                args: ['enableTime']
+            }], flatpickrEnableSeconds: [{
+                type: Input,
+                args: ['enableSeconds']
+            }], flatpickrHourIncrement: [{
+                type: Input,
+                args: ['hourIncrement']
+            }], flatpickrInline: [{
+                type: Input,
+                args: ['inline']
+            }], flatpickrLocale: [{
+                type: Input,
+                args: ['locale']
+            }], flatpickrMaxDate: [{
+                type: Input,
+                args: ['maxDate']
+            }], flatpickrMinDate: [{
+                type: Input,
+                args: ['minDate']
+            }], flatpickrMinuteIncrement: [{
+                type: Input,
+                args: ['minuteIncrement']
+            }], flatpickrMode: [{
+                type: Input,
+                args: ['mode']
+            }], flatpickrNextArrow: [{
+                type: Input,
+                args: ['nextArrow']
+            }], flatpickrNoCalendar: [{
+                type: Input,
+                args: ['noCalendar']
+            }], flatpickrParseDate: [{
+                type: Input,
+                args: ['parseDate']
+            }], flatpickrPrevArrow: [{
+                type: Input,
+                args: ['prevArrow']
+            }], flatpickrShorthandCurrentMonth: [{
+                type: Input,
+                args: ['shorthandCurrentMonth']
+            }], flatpickrStatic: [{
+                type: Input,
+                args: ['static']
+            }], flatpickrTime_24hr: [{
+                type: Input,
+                args: ['time_24hr']
+            }], flatpickrUtc: [{
+                type: Input,
+                args: ['utc']
+            }], flatpickrWeekNumbers: [{
+                type: Input,
+                args: ['weekNumbers']
+            }], flatpickrWrap: [{
+                type: Input,
+                args: ['wrap']
+            }], flatpickrOnChange: [{
+                type: Output,
+                args: ['onChange']
+            }], flatpickrOnClose: [{
+                type: Output,
+                args: ['onClose']
+            }], flatpickrOnOpen: [{
+                type: Output,
+                args: ['onOpen']
+            }], flatpickrOnReady: [{
+                type: Output,
+                args: ['onReady']
+            }], onClick: [{
+                type: HostListener,
+                args: ['dblclick']
+            }] } });
 
 class Ng2FlatpickrModule {
 }
-Ng2FlatpickrModule.ɵmod = ɵɵdefineNgModule({ type: Ng2FlatpickrModule });
-Ng2FlatpickrModule.ɵinj = ɵɵdefineInjector({ factory: function Ng2FlatpickrModule_Factory(t) { return new (t || Ng2FlatpickrModule)(); }, imports: [[CommonModule]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(Ng2FlatpickrModule, { declarations: [Ng2FlatpickrComponent,
+Ng2FlatpickrModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+Ng2FlatpickrModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrModule, declarations: [Ng2FlatpickrComponent,
         Ng2FlatpickrDirective], imports: [CommonModule], exports: [Ng2FlatpickrComponent,
-        Ng2FlatpickrDirective] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2FlatpickrModule, [{
-        type: NgModule,
-        args: [{
-                imports: [CommonModule],
-                declarations: [
-                    Ng2FlatpickrComponent,
-                    Ng2FlatpickrDirective
-                ],
-                exports: [
-                    Ng2FlatpickrComponent,
-                    Ng2FlatpickrDirective
-                ]
-            }]
-    }], null, null); })();
+        Ng2FlatpickrDirective] });
+Ng2FlatpickrModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrModule, imports: [[CommonModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: Ng2FlatpickrModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [CommonModule],
+                    declarations: [
+                        Ng2FlatpickrComponent,
+                        Ng2FlatpickrDirective
+                    ],
+                    exports: [
+                        Ng2FlatpickrComponent,
+                        Ng2FlatpickrDirective
+                    ]
+                }]
+        }] });
 
 /**
  * Generated bundle index. Do not edit.
