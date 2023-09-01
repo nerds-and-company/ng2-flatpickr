@@ -16,7 +16,7 @@
     ]
   },
   "angularCompilerOptions": {
-    "enableIvy": true
+    "compilationMode": "partial"
   },
   "files": [
     "./public-api.ts"
