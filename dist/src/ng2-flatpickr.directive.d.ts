@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { FlatpickrEvent } from './flatpickr-event.interface';
 import { FlatpickrInstance } from './flatpickr-instance';
 import { FlatpickrOptions } from './flatpickr-options.interface';
+import * as i0 from "@angular/core";
 export declare class Ng2FlatpickrDirective implements AfterViewInit, OnDestroy, OnInit, OnChanges {
     protected parent: ControlContainer;
     protected ngControl: NgControl;
@@ -279,4 +280,6 @@ export declare class Ng2FlatpickrDirective implements AfterViewInit, OnDestroy, 
      * doesn't exist.
      */
     protected getOption(option: string, defaultValue?: any): any;
+    static ɵfac: i0.ɵɵFactoryDef<Ng2FlatpickrDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<Ng2FlatpickrDirective, "[flatpickr]", ["ng2-flatpickr"], { "flatpickrOptions": "flatpickr"; "placeholder": "placeholder"; "flatpickrAltFormat": "altFormat"; "flatpickrAltInput": "altInput"; "flatpickrAltInputClass": "altInputClass"; "flatpickrAllowInput": "allowInput"; "flatpickrAppendTo": "appendTo"; "flatpickrClickOpens": "clickOpens"; "flatpickrDateFormat": "dateFormat"; "flatpickrDefaultDate": "defaultDate"; "flatpickrDisable": "disable"; "flatpickrDisableMobile": "disableMobile"; "flatpickrEnable": "enable"; "flatpickrEnableTime": "enableTime"; "flatpickrEnableSeconds": "enableSeconds"; "flatpickrHourIncrement": "hourIncrement"; "flatpickrInline": "inline"; "flatpickrLocale": "locale"; "flatpickrMaxDate": "maxDate"; "flatpickrMinDate": "minDate"; "flatpickrMinuteIncrement": "minuteIncrement"; "flatpickrMode": "mode"; "flatpickrNextArrow": "nextArrow"; "flatpickrNoCalendar": "noCalendar"; "flatpickrParseDate": "parseDate"; "flatpickrPrevArrow": "prevArrow"; "flatpickrShorthandCurrentMonth": "shorthandCurrentMonth"; "flatpickrStatic": "static"; "flatpickrTime_24hr": "time_24hr"; "flatpickrUtc": "utc"; "flatpickrWeekNumbers": "weekNumbers"; "flatpickrWrap": "wrap"; }, { "flatpickrOnChange": "onChange"; "flatpickrOnClose": "onClose"; "flatpickrOnOpen": "onOpen"; "flatpickrOnReady": "onReady"; }, never>;
 }

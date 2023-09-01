@@ -1,6 +1,7 @@
 import { AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { FlatpickrOptions } from './flatpickr-options.interface';
+import * as i0 from "@angular/core";
 export declare class Ng2FlatpickrComponent implements AfterViewInit, ControlValueAccessor, OnChanges {
     flatpickr: Object;
     private _tabindex;
@@ -22,4 +23,6 @@ export declare class Ng2FlatpickrComponent implements AfterViewInit, ControlValu
     ngAfterViewInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     onFocus(event: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<Ng2FlatpickrComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<Ng2FlatpickrComponent, "ng2-flatpickr", never, { "config": "config"; "placeholder": "placeholder"; "addClass": "addClass"; "setDate": "setDate"; "tabindex": "tabindex"; "hideButton": "hideButton"; }, {}, never, ["*"]>;
 }
